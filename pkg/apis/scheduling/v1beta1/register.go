@@ -30,7 +30,7 @@ var (
 
 const (
 	// GroupName is the group name used in this package.
-	GroupName = "scheduling.volcano.sh"
+	GroupName = "scheduling.aml-volcano.sh"
 
 	// GroupVersion is the version of scheduling group
 	GroupVersion = "v1beta1"

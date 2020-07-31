@@ -52,7 +52,7 @@ var service = &router.AdmissionService{
 				{
 					Operations: []whv1beta1.OperationType{whv1beta1.Create},
 					Rule: whv1beta1.Rule{
-						APIGroups:   []string{"batch.volcano.sh"},
+						APIGroups:   []string{"batch.aml-volcano.sh"},
 						APIVersions: []string{"v1alpha1"},
 						Resources:   []string{"jobs"},
 					},
