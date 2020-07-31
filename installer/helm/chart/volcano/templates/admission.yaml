@@ -81,6 +81,7 @@ spec:
             - --webhook-service-name={{ .Release.Name }}-admission-service
             - --alsologtostderr
             - --port=443
+            - --scheduler-name=aml-volcano
             - -v=4
             - 2>&1
           image: {{.Values.basic.admission_image_name}}:{{.Values.basic.image_tag_version}}

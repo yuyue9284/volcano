@@ -16,13 +16,13 @@ rules:
   - apiGroups: ["batch"]
     resources: ["jobs"]
     verbs: ["create", "get", "list", "watch", "delete", "update"]
-  - apiGroups: ["batch.volcano.sh"]
+  - apiGroups: ["batch.aml-volcano.sh"]
     resources: ["jobs"]
     verbs: ["get", "list", "watch", "update", "delete"]
-  - apiGroups: ["batch.volcano.sh"]
+  - apiGroups: ["batch.aml-volcano.sh"]
     resources: ["jobs/status"]
     verbs: ["update", "patch"]
-  - apiGroups: ["bus.volcano.sh"]
+  - apiGroups: ["bus.aml-volcano.sh"]
     resources: ["commands"]
     verbs: ["get", "list", "watch", "delete"]
   - apiGroups: [""]
@@ -95,6 +95,7 @@ spec:
             image: {{.Values.basic.controller_image_name}}:{{.Values.basic.image_tag_version}}
             args:
               - --alsologtostderr
+              - --scheduler-name=aml-volcano
               - -v=4
               - 2>&1
             imagePullPolicy: "IfNotPresent"
