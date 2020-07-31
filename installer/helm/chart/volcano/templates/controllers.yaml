@@ -98,4 +98,4 @@ spec:
               - --scheduler-name=aml-volcano
               - -v=4
               - 2>&1
-            imagePullPolicy: "IfNotPresent"
+            imagePullPolicy: "Always"

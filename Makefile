@@ -16,7 +16,7 @@ BIN_DIR=_output/bin
 RELEASE_DIR=_output/release
 REL_OSARCH=linux/amd64
 REPO_PATH=volcano.sh/volcano
-IMAGE_PREFIX=volcanosh/vc
+IMAGE_PREFIX=cmaksacr.azurecr.io/volcanosh/vc
 RELEASE_VER=v0.3
 
 include Makefile.def
@@ -52,6 +52,7 @@ images: image_bins
 	for name in controller-manager scheduler webhook-manager; do\
 		cp ${BIN_DIR}/${REL_OSARCH}/vc-$$name ./installer/dockerfile/$$name/; \
 		docker build --no-cache -t $(IMAGE_PREFIX)-$$name:$(TAG) ./installer/dockerfile/$$name; \
+		docker push $(IMAGE_PREFIX)-$$name:$(TAG); \
 		rm installer/dockerfile/$$name/vc-$$name; \
 	done
 

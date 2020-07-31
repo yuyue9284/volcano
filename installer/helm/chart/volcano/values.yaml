@@ -1,6 +1,6 @@
 basic:
   image_tag_version: "v0.3"
-  controller_image_name: "cmaksacr.azurecr.io/vc-controller-manager"
+  controller_image_name: "cmaksacr.azurecr.io/volcanosh/vc-controller-manager"
   scheduler_image_name: "cmaksacr.azurecr.io/volcanosh/vc-scheduler"
   admission_image_name: "cmaksacr.azurecr.io/volcanosh/vc-webhook-manager"
   admission_secret_name: "aml-volcano-admission-secret"
